@@ -1,0 +1,13 @@
+{
+  "name": "starter-front",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "watch": "sass assets/css/master.scss assets/css/master.css --watch",
+    "build": "sass assets/css/master.scss assets/css/master.css"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

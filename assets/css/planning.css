@@ -1,0 +1,262 @@
+
+*{
+    list-style: none;
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+body{
+    background: #d7d8de;
+}
+
+.wrapper .sidebar{
+    margin-top: 80px;
+    background: #0f0f1a;
+    position: relative;
+    width: 145px;
+    height: 40%;
+    padding: 10px;
+    transition: all 0.5s ease;
+    box-shadow: 1px 1px 5px rgb(0, 0, 0);
+    border-radius: 10px;
+    transform: translateX(50px);
+    opacity: 0.9;
+
+}
+
+.wrapper .sidebar .profile{
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.wrapper .sidebar .profile img{
+    display: block;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border-style: solid;
+    border-width: 10px;
+    border-color: rgb(255, 255, 255);
+    margin: 0 auto;
+    transform: translateX(-13px);
+}
+
+.wrapper .sidebar .profile h3{
+    color: #b9b9f1;
+    margin: 10px 0 5px;
+}
+
+.wrapper .sidebar .profile p{
+    color: rgb(206, 240, 253);
+    font-size: 14px;
+}
+
+.wrapper .sidebar ul li a{
+    display: inline-block;
+    padding: 13px 30px;
+    border-bottom: 1px solid #191933;
+    color: rgb(246, 246, 246);
+    font-size: 16px;
+    position: relative;
+    text-align: left;
+}
+
+.wrapper .sidebar ul li a .icon{
+    color: #e7e7e7;
+    width: 30px;
+    display: inline-block;
+}
+
+
+
+.wrapper .sidebar ul li a:hover
+{
+    color: #0c7db1;
+
+    background: #d7993e;
+    border-right: 2px solid rgb(255, 255, 255);
+}
+.wrapper .sidebar ul li a.active{
+    color: #0c7db1;
+
+    background: #1c1c33;
+    border-right: 2px solid rgb(255, 255, 255);
+}
+
+
+
+
+.wrapper .sidebar ul li a:hover .icon,
+.wrapper .sidebar ul li a.active .icon{
+    color: #ffffff;
+}
+
+.wrapper .sidebar ul li a:hover:before,
+.wrapper .sidebar ul li a.active:before{
+    display: block;
+}
+
+.wrapper .section{
+    width: calc(100% - 225px);
+    margin-left: 225px;
+    transition: all 0.5s ease;
+}
+
+.wrapper .section .top_navbar{
+    background: rgb(11, 11, 19);
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0 30px;
+
+}
+
+.wrapper .section .top_navbar .hamburger a{
+    font-size: 28px;
+    color: #b9b9f1;
+    z-index: 1;
+}
+
+.wrapper .section .top_navbar .hamburger a:hover{
+    color: #a2ecff;
+}
+
+.wrapper .section .container{
+    position: fixed;
+    margin: 30px;
+    background: #ffffff;
+    padding: 50px;
+    line-height: 28px;
+    border-radius:20px ;
+}
+
+body.active .wrapper .sidebar{
+    left: -225px;
+}
+
+body.active .wrapper .section{
+    margin-left: 0;
+    width: 100%;
+}
+
+section .container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 1000px;
+    height: 700px;
+    background: #ffffff;
+    border-radius: 2px;
+
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.container-onglets{
+    background: #48C9B0 ;
+    width: 100%;
+    height: 12%;
+    display: flex;
+    border-bottom: 1px solid #333;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+}
+.onglets {
+    width: 220px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 22px;
+    font-weight: 700;
+    cursor: pointer;
+}
+.onglets:not(:nth-child(3)) {
+    border-right: 1px solid #333;
+}
+
+.contenu {
+    height: 70%;
+    width: 100%;
+    position: absolute;
+    opacity: 0;
+}
+.contenu h3 {
+    padding: 20px;
+}
+.contenu hr {
+    width: 20%;
+    height: 2px;
+    margin-left: 20px;
+    background: #000;
+    border: none;
+}
+.contenu p {
+    padding: 20px;
+}
+
+/* Anim */
+
+.active {
+    background: #d7993e;
+    color: #f1f1f1;
+    transition: all 0.3s ease;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.active-contenu {
+    animation: fade 0.5s forwards;
+}
+@keyframes fade {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+.login .container {
+    z-index: 1;
+}
+.container .container-onglets img{
+    width: 80px;
+    height: 80px;
+}
+.container .container-onglets .calendar{
+    width: 60px;
+    height: 60px;
+}
+.contenu .container{
+    display: block;
+    position: relative;
+    width: 80%;
+    height:70px;
+    background-color: #d30000;
+    opacity: 1;
+    padding: 0px;
+    box-shadow: none;
+
+
+}
+.contenu .container .img img{
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+
+    border-color: #191933;
+    float: left;
+    margin-left: 5px;
+    transform: translateY(-45px);
+}
+.contenu .activity{
+    background-color: #41fa0d;
+    display: inline-flex;
+    width: 85%;
+    float: right;
+    height: fit-content;
+}
+
+

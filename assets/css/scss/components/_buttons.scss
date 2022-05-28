@@ -1,0 +1,16 @@
+.btn {
+  display: inline-flex;
+  height: 40px;
+  background: $black;
+  color: $white;
+  border-radius: 40px;
+  padding: 0 space(3);
+  align-items: center;
+  font-size: .9em;
+  font-weight: 600;
+
+  &.btn-empty {
+    background: transparent;
+    color: $black;
+  }
+}

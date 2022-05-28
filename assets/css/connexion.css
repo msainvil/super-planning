@@ -1,0 +1,321 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;600;700&display=swap");
+section html { 
+    
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    overflow: hidden;
+  }
+  
+section img{
+    display: block;
+    margin: auto;
+    width: 100%;
+    height: auto;
+  }
+  
+  section #login-button{
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 30px;
+    margin: auto;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: #ff91a6;
+    overflow: hidden;
+    opacity: 0;
+    box-shadow: 10px 10px 30px #a55c6a;}
+  
+  /* Login container */
+  section #container{
+   
+    position: absolute;
+    top: -65%;
+    left: 0;
+    right: -50%;
+    bottom: 0;
+    margin: auto;
+
+    width: 280px;
+    height: 350px;
+
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 1);
+    box-shadow: 1px 1px 5px rgb(88, 88, 88);
+   
+    
+    transform: translate(20px, 100px);
+    z-index: 1;
+    
+  }
+  
+  section .close-btn{
+    position: absolute;
+    cursor: pointer;
+    font-family: 'Open Sans Condensed', sans-serif;
+    line-height: 18px;
+    top: 3px;
+    right: 3px;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    border-radius: 10px;
+    opacity: 1;
+    -webkit-transition: all 2s ease-in-out;
+    -moz-transition: all 2s ease-in-out;
+    -o-transition: all 2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    transform: translateX(-400%);
+    transform: translate(-450%,40%);
+    
+
+  }
+  
+  section .close-btn:hover{
+    opacity: .5;
+
+  }
+  
+  /* Heading */
+  section h1{
+    font-family: 'Open Sans Condensed', sans-serif;
+    position: relative;
+    margin-top: 0px;
+    text-align: center;
+    font-size: 40px;
+    color: rgb(27, 27, 27);
+    
+  
+  }
+  
+  /* Inputs */
+  section a,
+  section input{
+    font-family: 'Open Sans Condensed', sans-serif;
+    text-decoration: none;
+    position: relative;
+    width: 80%;
+    display: block;
+    margin: 9px auto;
+    font-size: 17px;
+    color: rgb(66, 65, 65);
+    padding: 8px;
+    border-radius: 15px;
+
+      border-style: solid;
+      border-width: 1px;
+      border-color: #000;
+
+    background-color: rgb(255, 255, 255);
+    -webkit-transition: all 2s ease-in-out;
+    -moz-transition: all 2s ease-in-out;
+    -o-transition: all 2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+  }
+  
+  section input:focus, section input:hover{
+    outline: none;
+      box-shadow: 1px 1px 10px #8DBE77;
+      border-style: solid;
+      border-width: 1px;
+      border-color: #000;
+  }
+  section .insc{
+      background-color: #8DBE77;
+      border: none;
+      color: black;
+      text-align: center;
+  }
+  
+  /* Placeholders */
+ section ::-webkit-input-placeholder {
+     color: rgb(110, 110, 110);  }
+  :-moz-placeholder { /* Firefox 18- */
+     color: red;  }
+  ::-moz-placeholder {  /* Firefox 19+ */
+     color: red;  }
+  :-ms-input-placeholder {  
+     color: #333;  }
+  
+  /* Link */
+ section a{
+    font-family: 'Open Sans Condensed', sans-serif;
+    text-align: center;
+     padding: 4px 8px;
+    background: rgba(107,255,3,0.3);
+  }
+  
+  section a:hover{
+    opacity: 0.7;
+  }
+  
+  section #remember-container{
+    position: relative;
+    margin: -5px 20px;
+  }
+  
+  section .checkbox {
+    position: relative;
+    cursor: pointer;
+      -webkit-appearance: none;
+      padding: 5px;
+      border-radius: 4px;
+    background: rgba(3,3,3,.2);
+      display: inline-block;
+    width: 16px;
+    height: 15px;
+  }
+  
+ section  .checkbox:checked:active {
+      box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px 1px 3px rgba(0,0,0,0.1);
+  }
+  
+  section .checkbox:checked {
+    background: rgba(3,3,3,.4);
+      box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px -15px 10px -12px rgba(0,0,0,0.05), inset 15px 10px -12px rgba(255,255,255,0.5);
+      color: #fff;
+  }
+  
+ section .checkbox:checked:after {
+      content: '\2714';
+      font-size: 10px;
+      position: absolute;
+      top: 0px;
+      left: 4px;
+      color: rgb(255, 255, 255);
+  }
+  
+ section #remember{
+    position: absolute;
+    font-size: 13px;
+    font-family: 'Hind', sans-serif;
+    color: rgba(39, 39, 39, 0.5);
+    top: 7px;
+    left: 20px;
+  }
+  
+  #forgotten{
+    position: absolute;
+    font-size: 12px;
+    font-family: 'Hind', sans-serif;
+    color: rgba(255,255,255,.2);
+    right: 0px;
+    top: 8px;
+    cursor: pointer;
+    -webkit-transition: all 2s ease-in-out;
+    -moz-transition: all 2s ease-in-out;
+    -o-transition: all 2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+  }
+  
+  #forgotten:hover{
+    color: rgba(255,255,255,.6);
+  }
+  
+  #forgotten-container{
+    position:absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    width: 260px;
+    width: 260px;
+    border-radius: 10px;
+    background: rgba(3,3,3,0.25);
+    box-shadow: 1px 1px 50px rgb(255, 255, 255);
+    display: none;
+  }
+  
+  .orange-btn{
+    background: rgba(87,198,255,.5);
+  }
+
+  section h1,section h2 {
+    font-weight: 200;
+    margin: 0.4em 0;
+    font-family: "Roboto Mono", monospace;
+
+  }
+ section h1 { font-size: 1.2em; color:rgb(39, 39, 39);font-weight: large; margin-top: 10px; }
+  section h2 {
+    color: rgb(27, 27, 27);
+    font-size: 2em;
+  }
+  .txt-rotate::after{
+    content: ".";
+    color: rgba(167, 74, 243, 0.151);
+  }
+
+  section #ctr-btn{
+      background-color: #fff;
+      width: 30em;
+      height: 10em;
+      border-radius: 30px;
+      float: left;
+      box-shadow: 3px 3px 10px rgb(151, 170, 196);
+      
+  }
+  section .btn{
+    position: relative;
+    transform: translateX(15%);
+      display: inline-block;
+  }
+  .cnx-txt{
+      margin-bottom: 50px;
+  }
+
+section .btn {
+
+    padding: .75rem 1.25rem;
+    border-radius: 10rem;
+    color: #fff;
+
+    z-index: 1;
+}
+
+section .btn:hover {
+    color: #fff;
+}
+ section .btn {
+
+
+
+    cursor: pointer;
+    flex-shrink: 0;
+    font-weight: 800;
+    position: relative;
+    transition: 0.4s;
+
+}
+ .btn span {
+    position: relative;
+    z-index: 2;
+}
+ .btn::after {
+
+    width: 0;
+    height: 100%;
+    background: orange;
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 0;
+    transition: 0.4s;
+     border-radius: 10rem;
+}
+section .btn:hover {
+    color: #fff;
+}
+section .btn:hover::after {
+    width: 100%;
+}
+
+

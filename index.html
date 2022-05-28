@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>SuperPlanning</title>
+
+  <!-- STYLES -->
+  <link rel="stylesheet" href="assets/css/master.css">
+  <link rel="stylesheet" href="assets/css/connexion.css">
+  
+  <link rel="icon" type="image/x-icon" href="/icon/favicon.png"> 
+  <!-- SCRIPTS -->
+  <script src="assets/js/app.js" defer></script>
+
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script src="jquery-1.9.1.min.js"></script>
+<script src="TweenLite.min.js"></script>
+<script src="EasePack.min.js"></script>
+<script src="CSSPlugin.min.js"></script>
+<script src="main.js"></script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js"></script>
+
+</head>
+<body>
+
+  <header>
+    <div class="container">
+
+      <div class="left">
+        <a href="" class="logo">Super Planning<span>.</span></a>
+
+        <nav>
+          <a href="#">Find passion</a>
+          <a href="#">Categories</a>
+          <a href="#">Skills</a>
+          <a href="#">Custommer</a>
+        </nav>
+      </div>
+
+      <div class="buttons">
+        <a id="login-btn" href="#" class="btn btn-empty">Login</a>
+        <a href="inscription.html" class="btn">Inscription</a>
+      </div>
+
+    </div>
+  </header>
+
+  <div class="hero container">
+    <div class="left">
+      <h1>
+        Planifier.<br>
+        Executer.<br>
+        Grow.<br>
+      </h1>
+
+      <form action="">
+        <div class="input">
+          <input type="text" placeholder="Planifier une tâche">
+          <button><a id="login-btn" href="#"><span>Go</span></a></button>
+        </div>
+      </form>
+    </div>
+
+    <div class="right">
+
+      <section class="box1">
+        <div class="content">
+          <h2>Reunion <span>#Pro</span></h2>
+          <h3>
+            100
+            <span>topics</span>
+          </h3>
+        </div>
+      </section>
+
+      <section class="box2">
+        <div class="content">
+          <h2>Detente <span>#Perso</span></h2>
+          <h3>
+            100
+            <span>topics</span>
+          </h3>
+        </div>
+      </section>
+
+      <section class="box3">
+        <div class="content">
+          <h2>Entrainement <span>#Perso</span></h2>
+          <h3>
+            100
+            <span>topics</span>
+          </h3>
+        </div>
+      </section>
+
+    </div>
+  </div>
+
+  <div class="tabs containeri">
+    <h3>152,000 clients dans le monde nous font confiance.</h3>
+
+  </div>
+  <div class="logo">
+    <a class="logo1" href="#" class="active"><img src="partenaire/partenaire-1.png"></a>
+    <a class="logo1" href="#"><img src="partenaire/partenaire-2.png"></a>
+    <a class="logo1" href="#"><img src="partenaire/partenaire-3.png"></a>
+    <a class="logo1" href="#"><img src="partenaire/partenaire-4.png"></a>
+    <a class="logo1" href="#"><img src="partenaire/partenaire-5.png"></a>
+    <a class="logo1" href="#"><img src="partenaire/partenaire-6.png"></a>
+  </div>
+  <section class="login">
+  <div id="login-button">
+    <img src="https://dqcgrsy5v35b9.cloudfront.net/cruiseplanner/assets/img/icons/login-w-icon.png">
+    </img>
+  </div>
+  <div id="container">
+    <h1 class="cnx-txt">Connexion</h1>
+    <span class="close-btn">
+      <img src="/icon/close.png"></img>
+    </span>
+
+    <form name="loginForm" action="connexion.php"  method="POST" >
+
+      <input type="email" name="email" id="email" placeholder="E-mail">
+      <input type="password" id="password" name="password" placeholder="Password">
+
+      <input class="btn" type="submit" value="Connexion">
+
+
+      <div id="remember-container">
+        <input type="checkbox" id="checkbox-2-1" class="checkbox" checked="checked"/>
+        <span id="remember"> J'accepte les conditions*</span>
+        <span id="forgotten">Mot de passe oublié ?</span>
+      </div>
+  </form>
+    <a class="btn insc"  href="inscription.html">Inscription</a>
+  </div>
+</section>
+  <script src="app.js">
+
+  </script>
+</body>
+</html>
