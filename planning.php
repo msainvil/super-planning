@@ -56,28 +56,43 @@ while ($ligne = $resultat_activity->fetch_assoc()) {
 function show_activity($Id_activity, $Id_users,$Name_activity,$Description, $Lieu, $Etat, $Heure, $Date, $Priotite, $Tags, $Avancement)
 {
     $div_activity = "<div class='activity'>";
+    $div_options = "<div class='options'>";
+
+    $div_options_del = "<a><img class='top' src='icon/close.png' /></a>";
+    $div_options_mod = "<a><img class='middle' src='icon/edit.png' /></a>";
+
+
+
     $div_container = "<div class='container' >";
     $div_img = "<div class='img' >";
-    $img = "<img src='https://cdn-icons.flaticon.com/png/512/1032/premium/1032750.png?token=exp=1653676881~hmac=ff4b42be5a73540a745b1a6bcb1e8e72'/>";
+    $img = "<img src='icon/activity.png'/>";
 
     $div_close ="</div>";
-    $title = "<h1><?php echo $Name_activity  ?></h1>";
-    $resume = "<p> <?php echo substr($Description, 0, 30) . '...'; ?></p>";
+    $title = utf8_encode("<h1>".$Name_activity." </h1>");
+    $resume = utf8_encode("<p>".substr($Description, 0, 200) . '...'."</p>");
 
     $avancement_label = "<label for='file'>Avancement:</label>";
 
-    $avancement = "<progress id='file' max='100' value='<?php echo $Avancement?>'> <?php echo $Avancement.'%'?></progress>";
+    $avancement = "<progress id='file' max='100' value='".$Avancement."'>".$Avancement."'%'</progress>";
 
     echo htmlspecialchars_decode($div_container);
     echo htmlspecialchars_decode($div_img);
     echo htmlspecialchars_decode($img);
     echo htmlspecialchars_decode($div_close);
+
     echo htmlspecialchars_decode($div_activity);
     echo htmlspecialchars_decode($title);
     echo htmlspecialchars_decode($resume);
     echo htmlspecialchars_decode($avancement_label);
     echo htmlspecialchars_decode($avancement);
     echo htmlspecialchars_decode($div_close);
+
+    echo htmlspecialchars_decode($div_options);
+    echo htmlspecialchars_decode($div_options_del);
+    echo htmlspecialchars_decode($div_options_mod);
+    echo htmlspecialchars_decode($div_close);
+
+
     echo htmlspecialchars_decode($div_close);
 }
 
@@ -96,7 +111,8 @@ $conn->close();
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>SuperPlanning</title>
+    <title>Mon Planning</title>
+    <link rel="icon" type="image/x-icon" href="/icon/favicon.png">
 
     <!-- STYLES -->
 
@@ -126,6 +142,7 @@ $conn->close();
 
             </nav>
         </div>
+
 
         <!-- Bouton switch mode nuit-->
 
@@ -214,8 +231,7 @@ $conn->close();
             <div class="contenu">
                 <h3>Mon planning</h3>
                 <hr>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur perspiciatis alias quod, dolores eum illum doloremque assumenda odio architecto, dolorum vitae nobis, quo deleniti ipsum.</p>
-            </div>
+                   </div>
 
 
         </div>

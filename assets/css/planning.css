@@ -233,30 +233,76 @@ section .container {
     display: block;
     position: relative;
     width: 80%;
-    height:70px;
-    background-color: #d30000;
+    height:200px;
+    background-color: #ffffff;
     opacity: 1;
-    padding: 0px;
+    margin-top:  -20px;
     box-shadow: none;
+    border-style: solid;
+    border-width: 2px;
+    border-color: black;
+    padding: 10px;
 
 
 }
 .contenu .container .img img{
-    width: 90px;
-    height: 90px;
+    width: 80px;
+    height: 80px;
     border-radius: 50%;
-
     border-color: #191933;
-    float: left;
-    margin-left: 5px;
-    transform: translateY(-45px);
+
+
+    transform: translateY(0px);
+    margin: 0px;
+
 }
+.contenu .container .img{
+
+    display: inline-block;
+    position: absolute;
+    top:50px;
+    left:0px;
+}
+
 .contenu .activity{
-    background-color: #41fa0d;
-    display: inline-flex;
-    width: 85%;
-    float: right;
-    height: fit-content;
+    width: 80%;
+    height: auto;
+    height: 90px;
+    margin: 0px;
+    background-color: #8DBE77;
+    display: inline-block;
+    position: absolute;
+    top:10px;
+    transform: translateX(40px);
+
+
 }
+.contenu .activity h1{
+    font-weight: 900;
+    display: block;
+    margin: 0px;
+}
+.contenu .activity progress {
+    display: inline-block;
+    margin: 0px;
+}
+.contenu .activity p {
+    font-size: 15px;
+}
+
+.contenu .container .options {
+
+    width: 150px;
+    height: 80px;
+    cursor: pointer;
+    display: inline-block;
+    position: absolute;
+    top:10px;
+    right: 0px;
+}
+.options img.top { vertical-align: text-top; width: 25px; height: 25px; display: block; margin-bottom: 15px ; margin-top: 10px; transform: translateX(30px); cursor: pointer;}
+.options img.middle{ vertical-align: text-bottom; width: 30px; height: 30px; display: block; transform: translateX(30px); cursor:pointer; }
+
+
 
 
