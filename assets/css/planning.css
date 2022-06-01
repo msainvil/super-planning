@@ -13,9 +13,10 @@ body{
 }
 
 .wrapper .sidebar{
+    position: absolute;
     margin-top: 80px;
     background: #0f0f1a;
-    position: relative;
+
     width: 145px;
     height: 40%;
     padding: 10px;
@@ -24,6 +25,9 @@ body{
     border-radius: 10px;
     transform: translateX(50px);
     opacity: 0.9;
+    display: table;
+    top: 10px;
+    left:10px;
 
 }
 
@@ -41,7 +45,7 @@ body{
     border-width: 10px;
     border-color: rgb(255, 255, 255);
     margin: 0 auto;
-    transform: translateX(-13px);
+    transform: translateX(7px);
 }
 
 .wrapper .sidebar .profile h3{
@@ -61,7 +65,7 @@ body{
     color: rgb(246, 246, 246);
     font-size: 16px;
     position: relative;
-    text-align: left;
+
 }
 
 .wrapper .sidebar ul li a .icon{
@@ -105,20 +109,9 @@ body{
     transition: all 0.5s ease;
 }
 
-.wrapper .section .top_navbar{
-    background: rgb(11, 11, 19);
-    height: 100%;
-    display: flex;
-    align-items: center;
-    padding: 0 30px;
 
-}
 
-.wrapper .section .top_navbar .hamburger a{
-    font-size: 28px;
-    color: #b9b9f1;
-    z-index: 1;
-}
+
 
 .wrapper .section .top_navbar .hamburger a:hover{
     color: #a2ecff;
@@ -131,10 +124,11 @@ body{
     padding: 50px;
     line-height: 28px;
     border-radius:20px ;
+    overflow: scroll;
 }
 
 body.active .wrapper .sidebar{
-    left: -225px;
+    left: 0px;
 }
 
 body.active .wrapper .section{
@@ -142,16 +136,15 @@ body.active .wrapper .section{
     width: 100%;
 }
 
-section .container {
+section .wrapper .container {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
-    width: 1000px;
+    width: 950px;
     height: 700px;
     background: #ffffff;
-    border-radius: 2px;
-
+    border-radius: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
@@ -163,6 +156,9 @@ section .container {
     border-bottom: 1px solid #333;
     border-top-right-radius: 20px;
     border-top-left-radius: 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1;
 }
 .onglets {
     width: 220px;
@@ -192,9 +188,10 @@ section .container {
     margin-left: 20px;
     background: #000;
     border: none;
+    margin-bottom: 1px;
 }
 .contenu p {
-    padding: 20px;
+
 }
 
 /* Anim */
@@ -205,10 +202,12 @@ section .container {
     transition: all 0.3s ease;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
+
 }
 
 .active-contenu {
     animation: fade 0.5s forwards;
+    z-index: 1;
 }
 @keyframes fade {
     from {
@@ -229,23 +228,34 @@ section .container {
     width: 60px;
     height: 60px;
 }
-.contenu .container{
-    display: block;
-    position: relative;
+.container .contenu div.containers{
+
     width: 80%;
     height:200px;
+
     background-color: #ffffff;
-    opacity: 1;
-    margin-top:  -20px;
+
+
     box-shadow: none;
     border-style: solid;
+
     border-width: 2px;
     border-color: black;
+
     padding: 10px;
+    margin-bottom: 10px;
+
+    display: flex;
+    vertical-align: middle;
+    float: left;
+    z-index: 1;
+    border-radius: 20px;
+    transform: translate(80px, 10px);
+
 
 
 }
-.contenu .container .img img{
+.contenu .containers .img img{
     width: 80px;
     height: 80px;
     border-radius: 50%;
@@ -256,10 +266,10 @@ section .container {
     margin: 0px;
 
 }
-.contenu .container .img{
+.contenu .containers .img{
 
-    display: inline-block;
-    position: absolute;
+    display: block;
+    position:relative;
     top:50px;
     left:0px;
 }
@@ -269,11 +279,12 @@ section .container {
     height: auto;
     height: 90px;
     margin: 0px;
-    background-color: #8DBE77;
     display: inline-block;
     position: absolute;
     top:10px;
     transform: translateX(40px);
+    max-height: border-box;
+    position: inherit;
 
 
 }
@@ -284,13 +295,13 @@ section .container {
 }
 .contenu .activity progress {
     display: inline-block;
-    margin: 0px;
+
 }
 .contenu .activity p {
     font-size: 15px;
 }
 
-.contenu .container .options {
+.contenu .containers .options {
 
     width: 150px;
     height: 80px;
@@ -303,6 +314,38 @@ section .container {
 .options img.top { vertical-align: text-top; width: 25px; height: 25px; display: block; margin-bottom: 15px ; margin-top: 10px; transform: translateX(30px); cursor: pointer;}
 .options img.middle{ vertical-align: text-bottom; width: 30px; height: 30px; display: block; transform: translateX(30px); cursor:pointer; }
 
+.contenu .containers .activity div.date{
+    margin-left: 10px;
+    display: inline;
+}
+.contenu .containers .activity div img{
+    width: 30px;
+    height: 30px;
+}
+#description{
+    transform: translateX(45px);
+    border-radius: 10px;
+    background-color: #ffffff;
+}
+.bgedit{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 89.5%;
+    height: 70px;
+    background-color: #1c1c33;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+.bgedit a{
+    background-color: #0c7db1;
+    width: 30%;
+    color: white;
+    box-shadow: 0 0 10px rgb(70, 70, 134);
+}
+hr{
+    margin-bottom: 10px;
+}
 
 
 
