@@ -71,9 +71,13 @@ section img{
     -moz-transition: all 2s ease-in-out;
     -o-transition: all 2s ease-in-out;
     transition: all 0.2s ease-in-out;
+
+
     transform: translateX(-400%);
     transform: translate(-450%,40%);
-    
+
+      top: 10px;
+      right: -70px;
 
   }
   

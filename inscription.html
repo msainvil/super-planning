@@ -21,11 +21,8 @@
   <script src="assets/js/app.js" defer></script>
    <script src="app.js" defer></script>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-    <script src="jquery-1.9.1.min.js"></script>
-    <script src="TweenLite.min.js"></script>
-    <script src="EasePack.min.js"></script>
-    <script src="CSSPlugin.min.js"></script>
-    <script src="main.js"></script>
+
+
     <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js"></script>
 
     <style>
@@ -59,7 +56,7 @@
         </div>
 
         <div class="buttons">
-            <a id="login-btn" href="#" class="btn btn-empty">Login</a>
+            <a id="login-btn" href="index.html" class="btn btn-empty">Login</a>
 
         </div>
 
@@ -371,7 +368,7 @@
 
         <form name="loginForm" action="connexion.php"  method="post" >
             <input type="email" name="email" placeholder="E-mail">
-            <input type="password" name="pass" placeholder="Password">
+            <input type="password" name="password" placeholder="Password">
             <input class="btn" type="submit" value="Connexion">
 
 
@@ -386,6 +383,23 @@
 
 
 
-<script src="verify.js"></script>
+<script src="verify.js">
+    $('#login-btn').click(function(){
+        $('#login-button').fadeOut("fast",function(){
+            $("#container").fadeIn();
+            TweenMax.from("#container", .2, { scale: 0, ease:Sine.easeInOut});
+            TweenMax.to("#container", .2, { scale: 1, ease:Sine.easeInOut});
+        });
+    });
+
+    $(".close-btn").click(function(){
+        TweenMax.from("#container", .2, { scale: 1, ease:Sine.easeInOut});
+        TweenMax.to("#container", .2, { left:"0px", scale: 0, ease:Sine.easeInOut});
+
+        $("#container, #forgotten-container").fadeOut(200, function(){
+            $("#login-button").fadeIn(200);
+        });
+    });
+</script>
 </body>
 </html>

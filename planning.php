@@ -175,26 +175,25 @@ if( isset($_REQUEST['titre']) && isset($_REQUEST['date']) && $_REQUEST['edit']==
     $_Priorite = $_GET['priorite'];
     $_Tags = $_GET['tags'];
     $_Description = $_GET['description'];
-    $_Avancement = "En cours";
+    $_Avancement = 78;
 
 
     $id = $_REQUEST['Id_activity'];
     $sql ="UPDATE `activity` SET  Id_users = '$_Id_user', Name_activity = '$_Name', Description ='$_Description', Lieu = '$_Lieu', Heure = '$_Heure', `Date` = '$_Date', Priorite = '$_Priorite', Tags = '$_Tags', Avancement = '$_Avancement'  WHERE Id_activity='$id'" ;
-    $res = mysqli_query($conn, $sql);
 
-    if ($res){
+
+    if ($conn->query($sql) === TRUE){
 
         $update_msg ="<h3 class='msg'>Tâche Mis à jour avec succès</h3>";
 
+
     } else {
 
-        $update_msg = "<h3 class='msg'>Erreur lors de la mis à jour de la tache</h3>";
+        $update_msg = "<h3 class='msg'>Erreur lors de la mis à jour de la tache ". $conn->error."</h3>";
 
     }
 
 }
-
-
 
 
 
@@ -307,12 +306,6 @@ if (isset($_REQUEST['titre']) && isset($_REQUEST['date']) && isset($_REQUEST['id
         </div>
 
 
-
-
-
-
-
-
         <div class="container">
 
             <div class="container-onglets">
@@ -378,7 +371,7 @@ if (isset($_REQUEST['titre']) && isset($_REQUEST['date']) && isset($_REQUEST['id
                    echo "<center><h3>Aucune activité ici pour l'instant...</h3></center>";
 
                }else{
-                while($a<count($activity)){
+
 
                     foreach ($activity as $ligne) {
 
@@ -394,13 +387,13 @@ if (isset($_REQUEST['titre']) && isset($_REQUEST['date']) && isset($_REQUEST['id
                         $Tags_ = $ligne['Tags'];
                         $Avancement_ = $ligne['Avancement'];
 
-                        show_activity($Id_activity_, $Id_users_,$Name_activity_,$Description_, $Lieu_, $Etat_, $Heure_, $Date_, $Priorite_, $Tags_, $Avancement_);
 
+                        show_activity($Id_activity_, $Id_users_,$Name_activity_,$Description_, $Lieu_, $Etat_, $Heure_, $Date_, $Priorite_, $Tags_, $Avancement_);
                     }
 
 
                     $a +=1;
-                }
+
                }
 
                 ?>
@@ -466,8 +459,10 @@ if (isset($_REQUEST['titre']) && isset($_REQUEST['date']) && isset($_REQUEST['id
                   
                 <label for='titre'>Nom</label>  
                 <input type='hidden' id='id_user' name='id_user'  value='".utf8_encode($this_activity['Id_users'])."' required>
+                
                 <input type='hidden' id='edit' name='edit'  value='true'>
                 <input type='hidden' id='add' name='add'  value='false'>
+                
                 <input type='hidden' id='Id_activity' name='Id_activity'   value='".utf8_encode($this_activity['Id_activity'])."'>
                      
                 <input type='text' id='titre' name='titre'  placeholder='Titre' value='".utf8_encode($this_activity['Name_activity'])."' required>
@@ -511,12 +506,6 @@ if (isset($_REQUEST['titre']) && isset($_REQUEST['date']) && isset($_REQUEST['id
         </div>
 
         <ul>
-            <li>
-                <label class="switch">
-                    <input type="checkbox">
-                    <span class="slider round"></span>
-                </label>
-            </li>
 
             <li>
 
